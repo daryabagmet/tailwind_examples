@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/8ee72a4524.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        fontFamily: {
+          sans: ['Mulish', 'sans-serif'],
+          mono: ['Rokkitt', 'monospace'],
+        },
+      },
+    }
+  </script>
+  <title>Simple and clean Tailwind Components</title>
+</head>
+<body>
+<!-- login form -->
+  <div class="flex items-center justify-center min-h-screen py-20 bg-rose-100">
+    <div class="relative flex flex-col m-6 space-y-10 bg-white shadow-2xl rounded-2xl overflow-hidden md:flex-row md:space-y-0">
+      <div class="p-6 md:p-20">
+        <h2 class="font-mono mb-5 text-4xl font-bold">Log In</h2>
+        <p class="max-w-sm mb-12 font-sans font-light text-gray-600">
+          Log in to your account to download your files.
+        </p>
+        <input type="text" class="w-full p-6 border border-gray-300 rounded-md placeholder:font-sans placeholder:font-light"
+          placeholder="Enter your email" />
+        <div class="flex flex-col items-center justify-between mt-6 space-y-6 md:flex-row md:space-y-0">
+          <div class="font-thin text-cyan-700 cursor-pointer">Forgot password</div>
+      
+          <button
+            class="w-full md:w-auto flex justify-center items-center p-4 space-x-4 font-sans font-bold text-white rounded-md shadow-lg px-9 bg-cyan-700 shadow-cyan-100 hover:bg-opacity-90 shadow-sm hover:shadow-lg border transition hover:-translate-y-0.5 duration-150">
+            <span>Next <i class="fa-solid fa-arrow-right"></i></span>
+          </button>
+        </div>
+
+        <div class="mt-12 border-t border-t-gray-300">
+          <p class="py-4 text-sm font-thin text-center text-gray-400">
+            or log in with
+          </p>
+        
+          <div class="flex flex-col space-x-0 space-y-6 md:flex-row md:space-x-4 md:space-y-0">
+            <button
+              class="flex items-center justify-center py-2 space-x-3 border border-gray-300 rounded shadow-sm hover:bg-opacity-30 hover:shadow-lg hover:-translate-y-0.5 transition duration-150 md:w-1/2">
+              <img src="images/facebook.png" alt="facebook-logo" class="w-9" />
+              <span class="font-thin">Facebook</span>
+            </button>
+            <button
+              class="flex items-center justify-center py-2 space-x-3 border border-gray-300 rounded shadow-sm hover:bg-opacity-30 hover:shadow-lg hover:-translate-y-0.5 transition duration-150 md:w-1/2">
+              <img src="images/google.png" alt="google logo" class="w-9" />
+              <span class="font-thin">Google</span>
+            </button>
+          </div>
+        </div>
+      </div>
+  
+      <img src="images/login-bg.jpg" alt="" class="w-[430px] hidden md:block" />
+  
+      <div
+        class="group absolute -top-5 right-4 flex items-center justify-center w-10 h-10 bg-gray-200 rounded-full md:bg-white md:top-4 hover:cursor-pointer hover:-translate-y-0.5 transition duration-150">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-black group-hover:text-gray-600" viewBox="0 0 24 24"
+          stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </div>
+    </div>
+  </div>
+
+<!-- email subscribing form -->
+  <div class="flex items-center justify-center min-h-screen py-20 bg-slate-200">
+    <div class="bg-slate-800 p-2 mx-6 rounded-2xl">
+      <div class="flex flex-col md:flex-row rounded-l-xl overflow-hidden">
+        <img src="images/email-bg.jpg" alt="email image"
+          class="object-fit rounded-xl max-w-[400px] md:rounded-l-xl md:rounded-r-none transform hover:scale-105 hover:rounded-xl duration-200" />
+        <div class="p-6 md:p-12">
+          <h2 class="font-serif text-xl fomt-medium text-center text-white md:text-left">
+            Get the delicious recepies in your inbox
+          </h2>
+          <p class="max-w-xs my-4 text-xs leading-5 tracking-wide text-center text-white md:text-left">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque molestiae voluptatem amet nisi est earum
+            dolorem.
+          </p>
+          <div class="flex flex-col mt-5 space-y-4 md:flex-row:md:space-y-0">
+            <input type="text" placeholder="Enter your email"
+              class="p-2 px-4 text-center text-white bg-slate-800 border border-slate-600 placeholder:text-center md:text-left placeholder:md:text-left focus:outline-none">
+            <button
+              class="px-5 py-3 text-s rounded-md text-slate-800 bg-lime-500 hover:bg-lime-700 hover:text-white duration-500">
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- product card -->
+<div class="flex items-center justify-center min-h-screen py-20 bg-slate-100">
+  <div class="flex flex-col p-6 m-3 space-y-10 bg-white rounded-2xl shadow-2xl md:flex-row md:space-y-0 md:space-x-10 md:m-0 md:p-16">
+    <div class="flex items-center">
+      <img src="images/longsleeve.jpg" alt="longsleeve photo" class="w-full max-h-96 mx-auto duration-200 hover:scale-105" />
+    </div>
+    <div class="flex flex-col space-y-6">
+      <div class="flex flex-col mb-4 space-y-3 text-center md:text-left">
+        <div class="px-3 py-1 text-sm text-white bg-green-500 rounded-full w-max">
+          Free Shipping
+        </div>
+        
+        <div class="max-w-m md:max-w-sm text-2xl font-medium">
+          White Longsleeve 100% Cotton Size M
+        </div>
+        <div class="flex flex-col mb-4 space-y-3 text-center md:text-left">
+          <p class="line-through">$53</p>
+          <p class="text-3xl md:text-5xl font-bold">$39</p>
+          <p class="text-sm font-light text-gray-400">
+            This offer is valid until June 1th or as long as stock lasts!
+          </p>
+        </div>
+        <div class="group">
+          <button class="relative w-full transition-all duration-150 bg-blue-700 text-white rounded-lg group-hover:bg-blue-700 group-hover:shadow-lg active:inset-y-px">
+            <div class="px-8 py-4 duration-150 bg-blue-500 rounded-lg group-hover:bg-blue-700">
+              <i class="fa-solid fa-cart-shopping"></i>
+              Add to cart
+            </div>
+          </button>
+        </div>
+
+        <div class="flex items-center space-x-3 group">
+          <div class="w-3 h-3 bg-green-400 rounded-full group-hover:animate-ping"></div>
+          <div class="text-sm">10+ items in stock</div>
+        </div>
+
+        <div class="flex flex-col space-y-4 md:space-y-0 md:space-x-4 md:flex-row">
+          <button
+            class="flex items-center justify-center py-3 px-5 space-x-3 border-2 border-gray-300 rounded-lg shadow-sm hover:bg-opacity-30 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-150">
+            <i class="fa-solid fa-hand-holding-dollar"></i>
+            <span>Compare prices</span>
+          </button>
+
+          <button
+            class="flex items-center justify-center py-3 px-5 space-x-3 border-2 border-gray-300 rounded-lg shadow-sm hover:bg-opacity-30 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-150">
+            <i class="fa-regular fa-star"></i>
+            <span>Add to favorites</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- pricing box -->
+  <div class="flex items-center justify-center min-h-screen py-20 bg-slate-600">
+    <div class="flex flex-col my-6 space-y-6 md:space-y-0 md:space-x-6 md:flex-row md:my-0">
+      <div class="bg-slate-700 rounded-xl text-white">
+        <div class="p-8 mx-3 mt-3 rounded-t-xl bg-slate-800">
+          <div class="text-center uppercase">Basic</div>
+          <h2 class="mt-10 font-serif text-5xl text-center">100GB</h2>
+          <h3 class="mt-2 text-center">$2.99/Month</h3>
+          <div class="flex justify-center">
+            <a href="#"
+              class="px-10 py-3 my-6 text-center border border-green-600 rounded-lg duration-200 hover:bg-green-800 hover:border-green-800">Purchase</a>
+          </div>
+        </div>
+  
+        <div class="p-8 mx-3 mb-3 rounded-b-xl bg-slate-800">
+          <div class="flex flex-col space-y-2">
+            <div class="flex items-center">
+              <i class="fa-solid fa-check"></i>
+              <span class="text-sm ml-1">100 GB of storage</span>
+            </div>
+  
+            <div class="flex items-center">
+              <i class="fa-solid fa-check"></i>
+              <span class="text-sm ml-1">Option to add members</span>
+            </div>
+  
+            <div class="flex items-center">
+              <i class="fa-solid fa-check"></i>
+              <span class="text-sm ml-1">Extra member benefits</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-green-600 rounded-xl text-white">
+        <div class="p-8 mx-3 mt-3 rounded-t-xl bg-slate-800">
+          <div class="text-center uppercase">Standard</div>
+          <h2 class="mt-10 font-serif text-5xl text-center">200GB</h2>
+          <h3 class="mt-2 text-center">$5.99/Month</h3>
+          <div class="flex justify-center">
+            <a href="#"
+              class="px-10 py-3 my-6 text-center border border-green-600 rounded-lg duration-200 bg-green-600 hover:bg-green-800 hover:border-green-800">Purchase</a>
+          </div>
+        </div>
+  
+        <div class="p-8 mx-3 mb-3 rounded-b-xl bg-slate-800">
+          <div class="flex flex-col space-y-2">
+            <div class="flex items-center">
+              <i class="fa-solid fa-check"></i>
+              <span class="text-sm ml-1">200 GB of storage</span>
+            </div>
+  
+            <div class="flex items-center">
+              <i class="fa-solid fa-check"></i>
+              <span class="text-sm ml-1">Option to add members</span>
+            </div>
+  
+            <div class="flex items-center">
+              <i class="fa-solid fa-check"></i>
+              <span class="text-sm ml-1">Extra member benefits</span>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="bg-slate-700 rounded-xl text-white">
+        <div class="p-8 mx-3 mt-3 rounded-t-xl bg-slate-800">
+          <div class="text-center uppercase">Premium</div>
+          <h2 class="mt-10 font-serif text-5xl text-center">1000 GB</h2>
+          <h3 class="mt-2 text-center">$9.99/Month</h3>
+          <div class="flex justify-center">
+            <a href="#"
+              class="px-10 py-3 my-6 text-center border border-green-600 rounded-lg duration-200 hover:bg-green-800 hover:border-green-800">Purchase</a>
+          </div>
+        </div>
+  
+        <div class="p-8 mx-3 mb-3 rounded-b-xl bg-slate-800">
+          <div class="flex flex-col space-y-2">
+            <div class="flex items-center">
+              <i class="fa-solid fa-check"></i>
+              <span class="text-sm ml-1">1000 GB of storage</span>
+            </div>
+  
+            <div class="flex items-center">
+              <i class="fa-solid fa-check"></i>
+              <span class="text-sm ml-1">Option to add members</span>
+            </div>
+  
+            <div class="flex items-center">
+              <i class="fa-solid fa-check"></i>
+              <span class="text-sm ml-1">Extra member benefits</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
